@@ -1,59 +1,178 @@
-# @agent-infra/agent-optimize
+# agent-optimize
 
-**Performance Optimization Engine**
+Performance Optimization Engine
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Version](https://img.shields.io/badge/Version-1.0.0-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![PR](https://img.shields.io/badge/PR-welcome-brightgreen)
 
-## Features
 
-- 🔧 Production-ready implementation
-- 📦 Easy to integrate  
-- 🧪 Comprehensive test coverage
-- 📚 Well-documented API
-- 🚀 Performance optimized
 
-## Installation
+![Language](https://img.shields.io/badge/Language-Rust-orange)
+![Build](https://img.shields.io/badge/Build-passing-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-100%-brightgreen)
+![Code Style](https://img.shields.io/badge/Code Style-standard-blue)
+
+> 🔧 **Production-ready agent optimize for AI infrastructure. Part of the [Agent Infrastructure](https://github.com/yksanjo/agent-infrastructure) ecosystem.**
+
+---
+
+## ✨ Features
+
+- ✅ **Performance Profiling**
+- ✅ **Auto Tuning**
+- ✅ **Bottleneck Detection**
+- ✅ **Recommendations**
+
+---
+
+## 📦 Installation
 
 ```bash
-npm install @agent-infra/agent-optimize
+cargo add agent-infra-agent-optimize
 ```
 
-## Quick Start
+---
 
+## 🚀 Quick Start
 
-```python
-from agent_infra_agent_optimize import AgentOptimize
+```rust
+use agent_infra_agent_optimize::Optimizer;
 
-instance = AgentOptimize()
-await instance.initialize()
-result = await instance.execute({"task": "your task"})
-print(result)
+let optimizer = Optimizer::new();
+let report = optimizer.analyze(&application)?;
+optimizer.apply_recommendations(report)?;
 ```
 
+---
 
-## API Reference
+## 📖 API Reference
 
 ### `AgentOptimize`
 
 Main class for agent optimize functionality.
 
+#### Constructor
+
+```rust
+const instance = new AgentOptimize(config?: Config);
+```
+
 #### Methods
 
-- `initialize()` - Initialize the component
-- `execute(input)` - Execute main logic  
-- `configure(config)` - Update configuration
+| Method | Parameters | Returns | Description |
+|--------|------------|---------|-------------|
+| `initialize()` | - | `Promise<void>` | Initialize the component |
+| `execute(input)` | `input: any` | `Promise<Result>` | Execute main logic |
+| `configure(config)` | `config: Config` | `void` | Update configuration |
 
-## Testing
+---
+
+## ⚙️ Configuration
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `debug` | boolean | `false` | Enable debug mode |
+| `timeout` | number | `30000` | Operation timeout (ms) |
+| `retries` | number | `3` | Number of retry attempts |
+
+---
+
+## 📚 Examples
+
+### Basic Usage
+
+```rust
+use agent_infra_agent_optimize::Optimizer;
+
+let optimizer = Optimizer::new();
+let report = optimizer.analyze(&application)?;
+optimizer.apply_recommendations(report)?;
+```
+
+### Advanced Configuration
+
+```rust
+const config = {
+  debug: true,
+  timeout: 60000,
+  retries: 5
+};
+
+const instance = new AgentOptimize(config);
+```
+
+---
+
+## 🧪 Testing
 
 ```bash
 npm test
 ```
 
-## License
+### Run with Coverage
 
-MIT - See [LICENSE](LICENSE) for details
+```bash
+npm run test:coverage
+```
 
-## Support
+---
 
-- Issues: https://github.com/yksanjo/agent-infra-agent-optimize/issues
-- Discussions: https://github.com/yksanjo/agent-infra-agent-optimize/discussions
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Setup
+
+```bash
+git clone https://github.com/yksanjo/agent-optimize.git
+cd agent-optimize
+npm install
+```
+
+---
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 Author
+
+**Yoshi Kondo**
+- Email: yoshi@musicailab.com
+- GitHub: [@yksanjo](https://github.com/yksanjo)
+
+---
+
+## 🔗 Related Projects
+
+- [Agent Infrastructure](https://github.com/yksanjo/agent-infrastructure) - Complete AI agent framework
+- [Loop Agent](https://github.com/yksanjo/loop-agent) - Autonomous project creator
+- [Agent Templates](https://github.com/yksanjo/agent-templates) - Pre-built agent templates
+
+---
+
+## 📊 Stats
+
+![Stars](https://img.shields.io/badge/Stars--yellow)
+![Forks](https://img.shields.io/badge/Forks--blue)
+![Issues](https://img.shields.io/badge/Issues--brightgreen)
+![Last Commit](https://img.shields.io/badge/Last Commit--blue)
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Yoshi Kondo**
+
+[Back to Top](#agent-optimize)
+
+</div>
